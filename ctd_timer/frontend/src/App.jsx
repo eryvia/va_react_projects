@@ -10,6 +10,8 @@ function Countdown({targetDate}) {
     if (difference < 0) return null;
     
     return {
+      days: Math.floor((difference / (1000 * 60 * 60 * 24))),
+      hours: Math.floor((difference / (1000 * 60 * 60))),
       minutes: Math.floor((difference / (1000 * 60))),
       seconds: Math.floor((difference / 1000)),
     }
@@ -32,7 +34,7 @@ function Countdown({targetDate}) {
 
   return (
     <div>
-      {timeLeft.minutes}m {timeLeft.seconds}s
+      {timeLeft.days}d - {timeLeft.hours}h - {timeLeft.minutes}m - {timeLeft.seconds}s 
     </div>
   );
 }
@@ -59,12 +61,12 @@ function App() {
       <div className="form">
         <input type="date" name="ctn" value={inputDate} onChange={handleChange} />
         <button onClick={handleStart}>Start Countdown</button>
-        
-
-        
         {target && <Countdown targetDate={target} />}
 
       </div>
+
+
+      
       
     </>
   )
