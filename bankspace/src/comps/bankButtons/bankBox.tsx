@@ -1,14 +1,19 @@
 import * as motion from "motion/react-client"
 import './bankBox.css'
+import { banksInfo } from '../../inforoot/banks.tsx'
+
+
+type BankId = typeof banksInfo[number]['id'];;
+
 
 interface bankButtonProps {
-    bank?: string;
+    bank: BankId;
     className?: string, 
-    onClick: (bank: "rb" | "as") => void;
+    onClickFuncion: (bank: BankId) => void;
 }
 
 
-export default function BankButton({className, onClick}: bankButtonProps) {
+export default function BankButton({className, onClickFuncion, bank}: bankButtonProps) {
     return (
        
         <motion.div
@@ -16,8 +21,13 @@ export default function BankButton({className, onClick}: bankButtonProps) {
         whileTap={{ scale: 0.8 }}
         style={box}
         className={className}
-        onClick={() => onClick("rb")}
-        />
+        onClick={() => onClickFuncion(bank)}
+        >
+            <h1>
+                {bank}
+            </h1>
+
+        </motion.div>
         
     )
 }

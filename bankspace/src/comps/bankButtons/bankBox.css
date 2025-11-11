@@ -1,5 +1,6 @@
 .containerBankbuttons {
   display: flex;
-  gap: 20px; /* rovnoměrný rozestup mezi boxy */
-  flex-wrap: wrap; /* pokud chceš, aby se zalamovaly, když se nevejdou */
+  gap: 20px; 
+  flex-wrap: wrap; 
+  margin-top: 50px;
 }
