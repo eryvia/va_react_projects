@@ -17,16 +17,15 @@ export default function BankButton({className, onClickFuncion, bank}: bankButton
     return (
        
         <motion.div
-        whileHover={{ scale: 1.2 }}
-        whileTap={{ scale: 0.8 }}
-        style={box}
-        className={className}
-        onClick={() => onClickFuncion(bank)}
+            whileHover={{ scale: 1.2 }}
+            whileTap={{ scale: 0.8 }}
+            style={box}
+            className={className}
+            onClick={() => onClickFuncion(bank)}
         >
-            <h1>
+            <p className="buttonName">
                 {bank}
-            </h1>
-
+            </p>
         </motion.div>
         
     )

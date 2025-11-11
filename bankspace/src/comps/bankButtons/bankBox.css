@@ -4,3 +4,11 @@
   flex-wrap: wrap; 
   margin-top: 50px;
 }
+
+.buttonName {
+  font-family: monospace;
+  text-align: center;
+  margin-top: 33px;
+  font-size: 20px;
+  color: black;
+}

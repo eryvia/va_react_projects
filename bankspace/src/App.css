@@ -40,3 +40,39 @@
 .read-the-docs {
   color: #888;
 }
+
+
+.kq {
+  position: fixed;
+  inset: 0;                    
+  background-image: url("/src/assets/kq.png");
+  background-repeat: no-repeat; 
+  background-position: left 8% bottom; 
+  background-size: 512px auto; 
+  image-rendering: pixelated;  
+  z-index: -1;              
+}
+
+.kq::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+   /* overlay */
+}
+
+.kqbg {
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  background-image: url('/src/assets/kqbg.png');
+  background-repeat: no-repeat;
+  background-size: 210vh 400vh;
+  background-position: center;
+  image-rendering: pixelated;
+}
+
+.mainCont {
+  border-radius: 20px;
+  background-color: bisque;
+  padding: 30px;
+}
