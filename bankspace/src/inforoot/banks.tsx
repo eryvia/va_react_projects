@@ -1,8 +1,4 @@
-/*type bankSpaces = {
-  id: string
-  name: string
-  interestRate: number
-}*/
+
 
 export const banksInfo = [
     { id: 'moneta', name: 'Moneta Money Bank', interestRate: 0.05, color: '#fc561f' },
