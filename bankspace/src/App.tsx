@@ -5,6 +5,7 @@ import MainInput from './comps/mainInput';
 import { banksInfo } from './inforoot/banks.tsx' 
 import { PixelBackground } from './comps/kq.tsx'
 import CalculateInput  from './functions/calculateInput.tsx'
+import { OutputState } from './comps/outputStats.tsx'
 /*If somebody ever reads this --> this ui/ux was PURELY experimentional, i just really wanted killerqueen colorpalette involved. its really bad for a bank app, i know.*/
 
 type BankId = typeof banksInfo[number]['id'];
@@ -39,9 +40,14 @@ function App() {
          </div>
 
          <div className="bankTable">
-          {resultCalculatedBanks.map((bank) => ( 
+          {/*resultCalculatedBanks.map((bank) => ( 
             <p>{bank.name} {bank.interest} {bank.tax}</p>
+          ))*/}
+          {resultCalculatedBanks.map((bank) => ( 
+            
+            <OutputState bankname={bank.name} interest={bank.interest} tax={bank.tax}/>
           ))}
+
          </div>
       </div>
       
