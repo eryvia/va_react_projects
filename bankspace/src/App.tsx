@@ -3,7 +3,6 @@ import { useState } from 'react';
 import BankButton from './comps/bankButtons/bankBox';
 import MainInput from './comps/mainInput';
 import { banksInfo } from './inforoot/banks.tsx' 
-import { PixelBackground } from './comps/kq.tsx'
 import CalculateInput  from './functions/calculateInput.tsx'
 import { OutputState } from './comps/outputStats.tsx'
 /*If somebody ever reads this --> this ui/ux was PURELY experimentional, i just really wanted killerqueen colorpalette involved. its really bad for a bank app, i know.*/
@@ -17,6 +16,8 @@ function App() {
   console.log(selectedBank)
 
   const resultCalculatedBanks = CalculateInput(mainInput)
+
+  console.log(resultCalculatedBanks)
 /*
   useEffect(() => {
     const resultCalculatedBanks = CalculateInput(mainInput)
@@ -30,7 +31,7 @@ function App() {
 
   return (
     <>
-      <PixelBackground/>
+      <p className='title'>BANKSPACE</p>
       <div className='mainCont'>
         <MainInput onChange={setMainInput}/>
          <div className="containerBankbuttons">
@@ -44,8 +45,7 @@ function App() {
             <p>{bank.name} {bank.interest} {bank.tax}</p>
           ))*/}
           {resultCalculatedBanks.map((bank) => ( 
-            
-            <OutputState bankname={bank.name} interest={bank.interest} tax={bank.tax}/>
+            <OutputState bankid={bank.bankid} bankname={bank.name} interest={bank.interest} tax={bank.tax} activebank={selectedBank}/>
           ))}
 
          </div>

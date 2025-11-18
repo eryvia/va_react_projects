@@ -38,7 +38,7 @@ export default function BankButton({className, onClickFuncion, bank}: bankButton
 const box = {
     width: 100,
     height: 100,
-    backgroundColor: "#A2D2FF",
+    backgroundColor: "#d92323",
     borderRadius: 5,
 };
 

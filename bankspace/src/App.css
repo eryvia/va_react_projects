@@ -1,6 +1,5 @@
 #root {
   max-width: 1280px;
-  margin: 0 auto;
   padding: 2rem;
   text-align: center;
 }
@@ -41,38 +40,24 @@
   color: #888;
 }
 
-
-.kq {
-  position: fixed;
-  inset: 0;                    
-  background-image: url("/src/assets/kq.png");
-  background-repeat: no-repeat; 
-  background-position: left 8% bottom; 
-  background-size: 512px auto; 
-  image-rendering: pixelated;  
-  z-index: -1;              
-}
-
-.kq::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-   /* overlay */
-}
-
-.kqbg {
-  position: fixed;
-  inset: 0;
-  z-index: -2;
-  background-image: url('/src/assets/kqbg.png');
-  background-repeat: no-repeat;
-  background-size: 210vh 400vh;
-  background-position: center;
-  image-rendering: pixelated;
+.title {
+  font-family: satoshi, sans-serif;
+  font-weight: 900;
+  font-size: 50px;
+  margin-bottom: 20px;
 }
 
 .mainCont {
-  border-radius: 20px;
-  background-color: bisque;
+  border-radius: 7px;
+  background-color: #0d0d0d;
+  margin-left: 2vh;
   padding: 30px;
+}
+
+.blueOutput{
+  background-color: black;
+}
+
+.shadeOutput {
+  background-color: blue;
 }
