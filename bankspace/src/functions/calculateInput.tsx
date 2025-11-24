@@ -10,6 +10,12 @@ function CalculateAll( bankName: string, bankInterestRate: number , mainInput: n
 
 bankInfo.forEach()
 
+
+
+
+
+  
+
 */
 
 
@@ -23,3 +29,4 @@ export default function CalculateInput(mainInput: number)  {
   })
   return bankInfoFull
 }
+

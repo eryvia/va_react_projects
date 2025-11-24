@@ -9,21 +9,30 @@ interface outputState {
     tax: number 
     activebank: BankId | null
     state?: () => void
+    best?: boolean
+    worst?: boolean
+
 }
 
-export const OutputState = ({bankname, interest, tax, activebank, bankid}: outputState) =>  {
+export const OutputState = ({bankname, interest, tax, activebank, bankid, best, worst}: outputState) =>  {
 
     const redem: boolean = bankid === activebank;
-    console.log({redem, bankid, activebank})
+
+    let cssClass = redem ? "blueOutput" : "shadeOutput";
+    if (interest !== 0) {
+        if (best) cssClass += " good";
+        if (worst) cssClass += " bad";
+    }
+
+    console.log({redem, bankid, activebank, cssClass})
 
     return ( 
-        <div className={redem ? "blueOutput" : "shadeOutput"}>
-            <p>bankname: {bankname}</p>
-            <p>interest: {interest}</p>
-            <p>tax: {tax}</p>
+        <div className={cssClass}>
+            <p className='outputP'>{bankname}</p>
+            <p className='outputP'>interest: {interest} Kc</p>
+            <p className='outputP'>tax: {tax} Kc</p>
         </div>
         
     )
-
     console.log(bankname)
 }
